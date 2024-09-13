@@ -1,0 +1,97 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background-color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 900px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d40000;
+  color: white;
+  padding: 20px;
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+}
+
+form {
+  border: 1px solid #d40000;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-section h2 {
+  width: 100%;
+  font-size: 18px;
+  color: #d40000;
+  margin-bottom: 10px;
+}
+
+label {
+  width: 100%;
+  font-weight: bold;
+  color: #333;
+  font-size: 14px;
+}
+
+input, select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border:dotted;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+input[type="file"] {
+  padding: 0;
+}
+
+.submit-section {
+  display: flex;
+  justify-content: flex-start;
+}
+
+button {
+  background-color: #d40000;
+  color: white;
+  padding: 10px 20px;
+  border:dotted;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #b30000;
+}

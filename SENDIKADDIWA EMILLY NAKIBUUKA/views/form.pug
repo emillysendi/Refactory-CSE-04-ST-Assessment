@@ -1,0 +1,146 @@
+doctype html
+html
+  head
+    title Online Flight Booking Form
+    link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css")
+    style.
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+      .container {
+        width: 80%;
+        margin: auto;
+        overflow: hidden;
+      }
+      .header {
+        background-color: #b30000;
+        color: #fff;
+        padding: 20px 0;
+        text-align: center;
+      }
+      .form-container {
+        background-color: #fff;
+        padding: 30px;
+        border: 1px solid #ccc;
+        margin-top: 20px;
+      }
+      .form-section {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 20px;
+      }
+      .form-section div {
+        width: 30%;
+      }
+      input, select {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        box-sizing: border-box;
+      }
+      .submit-btn {
+        background-color: #b30000;
+        color: white;
+        padding: 15px 20px;
+        border: none;
+        cursor: pointer;
+      }
+      .submit-btn:hover {
+        background-color: #990000;
+      }
+      .success-message, .error-message {
+        display: none;
+        margin-top: 20px;
+        padding: 10px;
+        border-radius: 5px;
+      }
+      .success-message {
+        background-color: #d4edda;
+        color: #155724;
+      }
+      .error-message {
+        background-color: #f8d7da;
+        color: #721c24;
+      }
+  body
+    .header
+      h1 Online Flight Booking Form
+      p Rim Aviation Group
+    .container
+      .form-container
+        form#flightForm
+          .form-section
+            div
+              label Full Name *
+              input(type="text" id="fullName" required placeholder="Enter full name")
+            div
+              label Gender *
+              select(id="gender" required)
+                option(value="" disabled selected) -- Select --
+                option(value="male") Male
+                option(value="female") Female
+                option(value="other") Other
+            div
+              label Date of Birth *
+              input(type="date" id="dob" required)
+          .form-section
+            div
+              label Phone Number *
+              input(type="text" id="phone" required placeholder="Enter phone number")
+            div
+              label Email Address *
+              input(type="email" id="email" required placeholder="Enter email")
+            div
+              label P.O. BOX Number
+              input(type="text" id="poBox" placeholder="Enter P.O. Box number")
+          .form-section
+            div
+              label Passport Number *
+              input(type="text" id="passport" required placeholder="Enter passport number")
+            div
+              label Visa Document *
+              input(type="file" id="visaDoc" required)
+            div
+              label Departure City *
+              input(type="text" id="departureCity" required placeholder="Enter departure city")
+          .form-section
+            div
+              label Emergency Phone Number *
+              input(type="text" id="emergencyPhone" required placeholder="Enter emergency phone number")
+            div
+              label Destination City *
+              input(type="text" id="destinationCity" required placeholder="Enter destination city")
+          button.submit-btn(type="submit") Submit
+        .success-message#successMessage
+          p Successfully submitted the form!
+        .error-message#errorMessage
+          p Error: Please check the form and correct any mistakes.
+          
+    script.
+      document.getElementById('flightForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent form submission
+
+        // Input validation
+        const fullName = document.getElementById('SENDIKADDIWA EMILLY ').value;
+        const phone = document.getElementById('0700834684').value;
+        const email = document.getElementById('epsendi@gmail.com').value;
+        const passport = document.getElementById('123456789').value;
+        const departureCity = document.getElementById('UGANDA').value;
+        const destinationCity = document.getElementById('FRANCE').value;
+        const visaDoc = document.getElementById('W3Schools').value;
+        const date of birth = document.getElementById('20/02/2006').value;
+        const emergency = document.getElementById('0776617627').value;
+        const gender = document.getElementById('female').value;
+
+        if (fullName && phone && email && passport && departureCity && destinationCity && visaDoc) {
+          document.getElementById('successMessage').style.display = 'block';
+          document.getElementById('errorMessage').style.display = 'none';
+        } else {
+          document.getElementById('errorMessage').style.display = 'block';
+          document.getElementById('successMessage').style.display = 'none';
+        }
+      });
+              
